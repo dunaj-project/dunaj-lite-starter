@@ -14,6 +14,7 @@ A starter leiningen project for http://lite.dunaj.org[Dunaj lite].
   `git clone https://github.com/dunaj-project/dunaj-lite-starter.git`
 . Run REPL with `lein repl`
 . In REPL, eval following to start working with Dunaj
++
 [source,clojure,linesnum]
 --
 (require 'dunaj.core)
