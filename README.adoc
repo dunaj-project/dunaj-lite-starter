@@ -17,8 +17,11 @@ A starter leiningen project for http://lite.dunaj.org[Dunaj lite].
 +
 [source,clojure,linesnum]
 --
-(require 'dunaj.core)
-(dunaj.core/dunaj!)
+user=> (require 'dunaj.core)
+nil
+user=> (dunaj.core/dunaj!)
+#object[clojure.lang.Namespace 0xf273036 "dunaj.user"]
+dunaj.user=>
 --
 
 To use Dunaj lite in your sources, disable refering
