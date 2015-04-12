@@ -1,0 +1,63 @@
+= dunaj-lite-starter
+
+A starter leiningen project for http://lite.dunaj.org[Dunaj lite].
+
+== Requirements
+
+* Oracle JDK 8
+* Leiningen
+* Git
+
+== Usage
+
+. Clone this repository with
+  `git clone https://github.com/dunaj-project/dunaj-lite-starter.git`
+. Run REPL with `lein repl`
+. In REPL, eval following to start working with Dunaj
+[source,clojure,linesnum]
+--
+(require 'dunaj.core)
+(dunaj.core/dunaj!)
+--
+
+To use Dunaj lite in your sources, disable refering
+clojure.core vars and call `dunaj.core/dunaj-api!` macro.
+
+[source,clojure,linesnum]
+--
+(ns dunaj-starter.core
+  "See http://lite.dunaj.org for documentation and examples"
+  (:refer-clojure :only [])
+  (:require [dunaj.core :refer [dunaj-api!]]))
+
+(dunaj-api!)
+
+(defn bar :- String
+  [s :- String]
+  (str (print "Hello %s!" s)))
+
+(defn foo :- nil
+  [s :- String]
+  (println! (bar s))
+  nil)
+
+(foo "World")
+--
+
+See `dunaj-starter/core.clj` file for a bit more elaborate example.
+See http://lite.dunaj.org[Dunaj homepage] for documentation and
+examples.
+
+== License
+
+Copyright © 2013, 2015, Jozef Wagner.
+
+The use and distribution terms for this software are covered by the
+[Eclipse Public License 1.0](http://opensource.org/licenses/eclipse-1.0.php)
+which can be found in the file epl-v10.html at the root of this
+distribution.
+
+By using this software in any fashion, you are agreeing to be bound
+by the terms of this license.
+
+You must not remove this notice, or any other, from this software.
