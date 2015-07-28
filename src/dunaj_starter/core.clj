@@ -1,5 +1,5 @@
 (ns dunaj-starter.core
-  "See http://lite.dunaj.org for documentation and examples"
+  "See http://lite.dunaj.org for documentation and examples."
   (:refer-clojure :only [])
   (:require [dunaj.core :refer [dunaj-api!]]
             [dunaj.set :refer [intersection]]))

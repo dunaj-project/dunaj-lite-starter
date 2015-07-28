@@ -1,18 +1,18 @@
 = dunaj-lite-starter
 
-A starter leiningen project for http://lite.dunaj.org[Dunaj lite].
+A starter leiningen and boot project for http://lite.dunaj.org[Dunaj lite].
 
 == Requirements
 
 * Oracle JDK 8
-* Leiningen
+* Leiningen or Boot
 * Git
 
 == Usage
 
 . Clone this repository with
   `git clone https://github.com/dunaj-project/dunaj-lite-starter.git`
-. Run REPL with `lein repl`
+. Run REPL with `lein repl` or `boot repl`
 . In REPL, eval following to start working with Dunaj
 +
 [source,clojure,linesnum]
@@ -30,7 +30,7 @@ clojure.core vars and call `dunaj.core/dunaj-api!` macro.
 [source,clojure,linesnum]
 --
 (ns dunaj-starter.core
-  "See http://lite.dunaj.org for documentation and examples"
+  "See http://lite.dunaj.org for documentation and examples."
   (:refer-clojure :only [])
   (:require [dunaj.core :refer [dunaj-api!]]))
 
